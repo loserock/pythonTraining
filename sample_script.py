@@ -1,6 +1,4 @@
 # coding: utf-8
-i = str(i)
-print type(i), i
 # Python2.7
 from math import sqrt
 
@@ -10,3 +8,7 @@ i = sqrt(i)
 print type(i), i
 i = str(i)
 print type(i), i
+i = [i, i]
+print type(i), i
+print type(i[0])
+print type(i[0][0])

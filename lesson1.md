@@ -26,7 +26,10 @@ Python Tréning "2"
 
 ## Mi az a script nyelv?
 
-TODO
+## Mit az a magas szintű nyelv?
+
+## Mi az az interpreter?
+
 
 ---
 ### Script vs program
@@ -36,7 +39,7 @@ TODO
 # Python 2.7
 import sys
 if len(sys.argv) == 3:
-    print float(sys.argv[1]) * float(sys.argv[2])
+    print float(sys.argv[1]) ** float(sys.argv[2])
 else:
     print "Run with two params!"
 ```
@@ -58,7 +61,7 @@ import sys
 def main():
     "The main function."
     if len(sys.argv) == 3:
-        print float(sys.argv[1]) * float(sys.argv[2])
+        print float(sys.argv[1]) ** float(sys.argv[2])
     else:
         print_help()
 
@@ -198,4 +201,53 @@ https://pypl.github.io/PYPL.html
 ![200%](img/ipythonqt_sample.png)
 
 ---
-## 
+## Egyéb hasznos eszközök
+
+ - pip
+ - pep8, autopep8 & pycodestyle
+ - pylint
+
+```bash
+$ pip install --upgrade autopep8
+$ autopep8 --in-place --aggressive --aggressive <filename>
+```
+
+---
+## Python project
+
+ - Egy lehetséges project szerkezet.
+```
+README.rst
+LICENSE
+setup.py
+requirements.txt
+sample/__init__.py
+sample/core.py
+sample/helpers.py
+docs/conf.py
+docs/index.rst
+tests/test_basic.py
+tests/test_advanced.py
+```
+
+---
+#### `setup.py`
+![230%](img/setuppy_sample.png)
+
+---
+#### `Makefile`
+
+```
+init:
+    pip install -r requirements.txt
+
+test:
+    py.test tests
+
+.PHONY: init test
+```
+---
+
+### Kérdések?
+
+### Kódolás...
