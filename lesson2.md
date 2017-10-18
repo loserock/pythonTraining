@@ -37,6 +37,10 @@ Python Tréning "2"
 
 ---
 
+## But first, something completely different...
+
+---
+
 ## Alap típusok
 
  - int, float
