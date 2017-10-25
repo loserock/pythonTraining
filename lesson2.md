@@ -101,9 +101,10 @@ f.close()
 lines = []
 with open("c:\\path\\to\\file.txt", "r") as file_read:
     # work with file_read object
-    curr_line = file_read.readline()
-    if "sample string" in curr_line:
-        lines.append(curr_line)
+    for curr_line in file_read:
+        # like: curr_line = file_read.readline()
+        if "sample string" in curr_line:
+            lines.append(curr_line)
         
 # file_read object closed automatically!
 ```
