@@ -131,7 +131,7 @@ s.difference(s2)    # s - s2
     - valójában mini program (procedure)
  - **gyors** és _sokszor_ praktikus
  - _dict_ comprehension, _set_ comprehension
- - _generator_ comprehension
+ - _generator_ expression (~comprehension)
 
 ---
 ## List Comprehension
@@ -168,8 +168,69 @@ d = {i: i*i for i in xrange(10,101,2)}
 
 ## Much more?
 ---
+## Comprehension vs `map()` sebesség
 
-## Generator Comprehension
+```bash
+$ python -mtimeit -s'xs=range(10)' 'map(hex, xs)'
+1000000 loops, best of 3: 1.41 usec per loop
+```
+```bash
+$ python -mtimeit -s'xs=range(10)' '[hex(x) for x in xs]'
+1000000 loops, best of 3: 1.81 usec per loop
+```
+```bash
+$ python -mtimeit -s'xs=range(10)' 'map(lambda x: x+2, xs)'
+1000000 loops, best of 3: 1.97 usec per loop
+```
+```bash
+$ python -mtimeit -s'xs=range(10)' '[x+2 for x in xs]'
+1000000 loops, best of 3: 0.921 usec per loop
+```
+---
+
+## Comprehension vs `map()` sebesség 2
+
+ - az ördög előbújik _JIT_ esetén
+
+```bash
+pypy -mtimeit -s'xs=range(10)' 'map(lambda x: x+2, xs)'
+1000000 loops, best of 3: 0.452 usec per loop
+
+pypy -mtimeit -s'xs=range(1000)' 'map(lambda x: x+2, xs)'
+10000 loops, best of 3: 33.4 usec per loop
+```
+
+```bash
+pypy -mtimeit -s'xs=range(10)' '[x+2 for x in xs]'
+10000000 loops, best of 3: 0.125 usec per loop
+
+pypy -mtimeit -s'xs=range(1000)' '[x+2 for x in xs]'
+100000 loops, best of 3: 3.47 usec per loop
+
+```
+
+---
+
+## Comprehension vs `map()` különbségek
+ - scope veszélyek:
+```python
+for x, y in somePoints:
+    # (several lines of code here)
+    squared = [x ** 2 for x in numbers]
+    # Oops, x was silently overwritten!
+```
+ - túlterhelés:
+```python
+# Python 3
+>>> map(str, range(10**100))
+<map object at 0x2201d50>
+>>> [str(n) for n in range(10**100)]
+# DO NOT TRY THIS AT HOME OR YOU WILL BE SAD #
+```
+
+---
+
+## Generator Expression
 
  - csak egy gyors példa
 
@@ -178,12 +239,14 @@ d = {i: i*i for i in xrange(10,101,2)}
 g = ( i*i for i in xrange(10,21,2) )
 
 # this is a generator:
+print g.next()
 for sq in g:
     print sq,
 ```
 
 ```bash
-$ 100 144 196 256 324 400
+100
+144 196 256 324 400
 ```
 
 ---
