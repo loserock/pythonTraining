@@ -48,7 +48,7 @@ b = function_name("abc", "def")
  - nem előre fix paraméterek, mint lista: `*args`
 ```python
 def fn(a, b, *paramlist):
-    if len(paramlist) > 3:
+    if len(paramlist) > 0:
         # ...
 ```
 ---
