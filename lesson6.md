@@ -42,7 +42,7 @@ http://www.diveintopython.net/getting_to_know_python/everything_is_an_object.htm
     - változók (!)
     - függvények (!)
  - értékül adható, referálható
- - lehetnek metódusai, saját dokumentációja
+ - lehetnek metódusai, van saját dokumentációja
 
 ---
 
@@ -68,7 +68,7 @@ op.get_42()   # it works!
  - `class` kulcsszóval definiálható
     - (vagy _esetleg_ `type(,,)` segítségével)
 
-```
+```bash
 class MyClass:
     """The documentation string"""
     i = 12345   # a class variable
@@ -105,7 +105,7 @@ print id(c1), id(c2), id(c2_ref)
 ## Osztályok Pythonban
 
  - alapvetően minden eleme _publikus_
- - ami publikus _címke_, az módosítható
+ - ami publikus, az módosítható is
 
 ```python
 print c1.i
@@ -126,13 +126,13 @@ print c.__i   # throw an error!
 ## Osztályok Pythonban
 
  - osztály member függvények (metódusok)
- - első `self` paraméter maga az osztály
-```
+ - első paraméter a `self`,  maga az osztály _példánya_
+```bash
 class SampleClass:
     __privateValue = 0
     name = "nothing"
     def countCalls(self):
-    	self.__protectedValue += 1
+    	self.__privateValue += 1
         print "Called " + self.__privateValue + " times."
     def call_me(self, s):
     	self.name = str(s)
@@ -146,7 +146,8 @@ class SampleClass:
 ## Konstruktor, osztály változók
 
  - `__init__` (és `__new__`) függvény a **konstruktor**: minden példányosításkor lefut
- - Az osztály változó a példányok között _közös_, a konstruktorban (vagy más függvényben vagy kívülről) deklarált _saját egyedi_!
+ - Az osztály változók a példányok között _közösek_.
+ - Konstruktorban, metódusban (vagy kívülről) deklarált változók _példányonként sajátok_!
 
 ```bash
 class Sample:
@@ -166,17 +167,19 @@ c1 = Sample("Adam")
 c2 = Sample()
 c3 = Sample("Eva")
 
-# different names of everyone:
+# different names for everyone:
 print [i.get_name() for i in (c1, c2, c3)]
+## ["Adam", "default name", "Eva"]
 
 # but class vars shared:
 print c1.ourName, c2.ourName, c3.ourName, Sample.ourName
+## all is "Sample" !
 
+# be careful!
 Sample.ourName = "our new name"  # change in all!
-
 c3.ourName = "my renegate name"  # NO, that is redefinition!
 print c1.ourName, c2.ourName, c3.ourName, Sample.ourName
-
+# our new name our new name my renegate name our new name
 ```
 ---
 
