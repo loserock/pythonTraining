@@ -1,6 +1,6 @@
 <!-- $theme: gaia -->
 <!-- page_number: false -->
-<!-- footer: Péter Handbauer, version: 10/04 -->
+<!-- footer: Péter Handbauer, version: 11/15 -->
 <!-- $size: a1 -->
 
 
@@ -213,7 +213,7 @@ class Car(Vehicle, Product):
     # methods and vars from both Vehicle and Product
 ```
 ## Öröklés, attribútum ellenőrzés
- - ős lekérése: `super(ClassObj)`
+ - ős lekérése: `super(type)`, `super(type, instance)`
  - a példány őseinek ellenőrzése: `isinstance(inst, (C1, C2))`
  - member ellenőrzés: `hasattr(instance, "attribute_name")`
  - magát a membert: `getattr(something_object, "attr_name")`
@@ -221,3 +221,65 @@ class Car(Vehicle, Product):
 ---
 
 # ...
+
+---
+
+## Operator overloading
+
+ - Az operátorok és sok függvény is valójában egy védett metódust hív.
+Csak néhány példa:
+ - Számokra `<`, `>`, `==`, `cmp()`: `.__cmp__(self, x)`
+ - Collectionökre `len()`: `.__len__(self)`
+    - `[]`: `.__getitem__(self, i)`
+    - `[::]`: `.__getslice__(self, i,j,k)`
+ - Konverziók is sokszor: `str()`, `repr()`: `.__str__(self)`, `.__repr__(self)`
+
+---
+
+## Operator overloading
+ - `+`: `.__add__(self, x)`; `*`: `__mul__(self, x)`
+ - hashing (pl. dict-ben kulcsokhoz): `.__hash__(self)`
+ - string compare: `.__lt__(self, x)`, `.__le__(self, x)`, `.__eq__(self, x)`, `.__ge__(self, x)`, `.__gt__(self, x)`
+
+ - ha valami _iterable_ kell legyen: `.__iter__(self)`, `.next()`
+
+ - gyakorlásra:
+https://www.hackerrank.com/challenges/class-1-dealing-with-complex-numbers/problem
+
+---
+
+## Nem érdemes kapkodni!
+
+ - Vannak egyszerűbb kész módszerek is, pl. feltételes sorbarendezésre (operátor felülírás helyett):
+```python
+from random import randint
+
+class Point():
+    def __init__(self, x=0, y=0):
+        self.x, self.y = x, y
+
+point_list = [ Point(randint(-10, 10), randint(-10, 10))
+               for i in xrange(1000) ]
+
+# sort with x:
+point_list.sort(key=lambda p: p.x)
+
+```
+
+---
+
+## Hogyan tovább?
+
+ - Sok-sok gyakorlás példákkal:
+https://www.hackerrank.com/domains/python/py-introduction
+
+ - Ajánlott összefoglaló hasznos dolgokra:
+http://book.pythontips.com/en/latest/index.html
+
+ - Don't forget to import this! :)
+
+---
+
+## Jó készülést!
+
+## Kérdések?
