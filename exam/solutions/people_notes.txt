@@ -1,0 +1,79 @@
+Szia!
+
+Küldöm az eredményed rövid összefoglalóját!
+Részletesebb megjegyzések és infók majd később!
+
+
+
+Kis magyarázat:
+Teszt: A zárójelben írt szám az első teszthez képesti változásod.
+Feladat: Hány részfeladatod végeredménye lett jó, illetve összességében hány százalékosra értékeltem a teljes megoldásodat. A százalékba belevehettem részmegoldásokat vagy bónuszt adhattam jó ötletekért.
+Összesítés: A kiátlagolt eredményed. Ha írtál első tesztet és ahhoz képest tudtál javulni, akkor kaptál egy második százalékot is ami ezt is tartalmazza!
+
+*: A kimenetre nem minden esetben azt írtad ki, mint amit kellett volna, de tartalmilag ennyi megoldásod volt jó! A máshogy kiírt eredményért nem voltam le pontot.
+
+Farkas András Omar
+Teszt: 70% (-10%)
+Feladat: 8/5, 50%
+Összesen: 60%
+
+Mórocz Eszter
+Teszt: 90% (+50%)
+Feladat: 8/4.5, 60%
+(A második beküldés >10 perc késése miatt az 5. feladatot 0.5-nek számoltam.) 
+Összesen: 75%/90%
+
+Nyírő Balázs
+Teszt: 100% (+0%)
+Feladat: 8/8*, 95%
+Összesen: 98%
+
+Pető András
+Teszt: 80% (+20%)
+Feladat: 8/8*, 99%
+Összesen: 90%/100%
+
+Végi András
+Teszt: 90% (+30%)
+Feladat: 8/4*, 55%
+Összesen: 73%/88%
+
+Bernáth Gábor
+Teszt: 80% (+50%)
+Feladat: 8/6, 80%
+Összesen: 80%/100%
+
+Dávid Ferenc
+Teszt: 60% (+20%)
+Feladat: 8/3*, 57%
+Összesen: 59%/69%
+
+Monostory Márk
+Teszt: 70% (+50%)
+Feladat: 8/5.5*, 66%
+Összesen: 68%/93%
+
+Szabó Attila
+Teszt: 80% (+0%)
+Feladat: 8/6.5*, 85%
+Összesen: 83%
+
+Szilágyi Kristóf
+Teszt: 40% (-)
+Feladat: 8/3, 46%
+Összesen: 43%
+
+Bara János
+Teszt: 60% (+0%)
+Feladat: 8/2, 30%
+Összesen: 45%
+
+Fóthy Réka
+Teszt: 40% (+30%)
+Feladat: 8/2*, 29%
+Összesen: 35%/50%
+
+Albert Benjámin
+Teszt: 80% (+10%)
+Feladat: 8/7, 100%
+Összesen: 90%/95%

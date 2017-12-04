@@ -1,0 +1,123 @@
+
+=============
+
+Farkas Andras Omar
+19
+3
+20.0
+xw1ng
+d4r3d3v1l
+30.0 29.0
+
+=============
+
+Morocz Eszter
+19
+3
+20.0
+xw1ng
+
+=============
+
+vizsgázó: Nyírő Balázs
+cars1.txt fajl 19 sornyi GPS log adatot tartalmaz.
+3 autorol tartalmaz adatot
+legnagyobb x koordinata: 20
+legnagyobb y (30) koordinatan jart auto neve: xw1ng
+sultan autorol szerepel a legtobb adat
+38.0 33.0
+Gyanus jarmu kereses:
+Gyanus jarmu neve: AmoD
+
+=============
+
+Peto Andras
+19
+3
+20.0
+xw1ng
+sultan
+38.0,33.0
+AmoD
+
+=============
+
+Vegi Andras
+Cars1 length: 19
+Cars1 car number: 3
+[-10.0, 0.0, -25.0, -10.0, -20.0, -20.0, -10.0, 5.0, -10.0, -20.0, 5.0, 0.0, -34.0, 20.0, 10.0, -30.0, -20.0, 10.0, 20.0]
+max X Coord: 20.0 
+
+=============
+
+Bernath Gabor
+19
+3
+20.0
+xw1ng
+sultan
+
+
+
+=============
+
+My name is David Ferenc
+A file contains 19 rows
+There are 3 different numberplates in the cars1 file
+The maximum of the x coordinates is 5.0 
+There number plate with the maxumum x coordinate is abc123
+
+=============
+
+Monostory Márk
+Number of lines in cars1.txt:  19
+Count of cars in cars1.txt:  3
+Maximum y coordinate if file cars1.txt:  30.0
+The following car reached maximum y ccordinate:  xw1ng
+The following car reached maximum y ccordinate:  xw1ng
+sultan
+
+=============
+
+Szabo Attila
+GPS sorok szama : 19
+3
+20.0
+xw1ng
+{'igo3000': 15, 'sultan': 37, 'u235': 22, 'R2D2': 13, 'AmoD': 17, 'd4r3d3v1l': 32}
+ -- 7. feladat --
+AmoD
+
+=============
+
+Szilagyi Kristof
+19
+3
+5.0
+abc123
+
+=============
+
+=============
+
+Bara Janos
+19
+19
+game over. Majd legkozelebb :(
+
+=============
+
+Fothy Reka
+19
+['20.0']
+
+=============
+
+Albert Benjamin
+19
+3
+20.0
+xw1ng
+sultan
+30.0 29.0
+AmoD
